@@ -9,22 +9,65 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-            <div class="container-fluid">
-                <ul class="navbar-nav">
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="25%"></a>
-                    <li class="nav-item"><a class="nav-link disabled" href="#">Storefront</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Galleries</a><ul class="dropdown-menu">
-                        <li><a class="dropdown-item disabled" href="#">Artwork</a></li>
-                        <li><a class="dropdown-item" href="gal-chibi.html">Chibis</a></li>
-                        <li><a class="dropdown-item disabled" href="#">Fumos</a></li>
-                    </ul></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Rules</a><ul class="dropdown-menu">
-                        <li><a class="dropdown-item disabled" href="#">Rules - Normal Commission</a></li>
-                        <!-- <li><a class="dropdown-item" href="#">Rules - NSFW Commission</a></li> -->
-                    </ul></li>
-                </ul>
+        <div>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="25%"></a>
+                        <li class="nav-item"><a class="nav-link disabled" href="#">Storefront</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Galleries</a><ul class="dropdown-menu">
+                            <li><a class="dropdown-item disabled" href="#">Artwork</a></li>
+                            <li><a class="dropdown-item" href="gal-chibi.html">Chibis</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Fumos</a></li>
+                        </ul></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Rules</a><ul class="dropdown-menu">
+                            <li><a class="dropdown-item disabled" href="#">Rules - Normal Commission</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Rules - NSFW Commission</a></li> -->
+                        </ul></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-sm-12 bg-primary text-white text-center"><h1>Chibi Gallery</h1></div>
             </div>
-        </nav>
+
+            <br>
+
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                <!-- Carousel -->
+                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                                <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button> -->
+                            </div>
+
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/chibi/1.png" class="d-block w-100">
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
     </body>
 </html>
