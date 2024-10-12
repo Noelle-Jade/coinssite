@@ -1,6 +1,12 @@
 :root {
   --primary: #ffffff;
   --text: #cdd6f4;
+
+  --size: clamp(10rem, 1rem + 40vmin, 30rem);
+  --gap: calc(var(--size) / 150);
+  --duration: 10s;
+  --scroll-start: 0;
+  --scroll-end: calc(-100% - var(--gap));
 }
 @font-face {
   font-family: "RobotoSlab";
@@ -14,6 +20,9 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0%;
+  overflow: hidden;
+  min-height: 100vh;
+  gap: var(--gap);
 }
 main {
   flex: 3;
@@ -26,6 +35,7 @@ main {
   margin: 32px;
 }
 .panel {
+    height:850px;
 }
 .inset-panel {
   border-radius: 32px;
@@ -96,7 +106,6 @@ a {
   font-size: 2em;
   margin: 0px;
 }
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -106,9 +115,39 @@ a {
   flex: 20%;
   padding: 0 4px;
 }
-
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+}
+.marquee {
+  display: flex;
+  overflow: hidden;
+  gap: var(--gap);
+  flex-direction: column;
+}
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-height: 100%;
+  animation: scroll var(--duration) infinite;
+  flex-direction: column;
+}
+.marquee--reverse .marquee__content {
+  animation-direction: reverse;
+  animation-delay: -3s;
+}
+.marquee img {
+  width: calc(var(--size) / 2.2);
+}
+@keyframes scroll {
+  from {
+    transform: translateY(var(--scroll-start));
+  }
+  to {
+    transform: translateY(var(--scroll-end));
+  }
 }
