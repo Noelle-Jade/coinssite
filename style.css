@@ -4,7 +4,7 @@
 
   --size: clamp(10rem, 1rem + 40vmin, 30rem);
   --gap: calc(var(--size) / 150);
-  --duration: 10s;
+  --duration: 30s;
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
 }
@@ -133,12 +133,11 @@ a {
   justify-content: space-around;
   gap: var(--gap);
   min-height: 100%;
-  animation: scroll var(--duration) infinite;
+  animation: scroll var(--duration) linear infinite;
   flex-direction: column;
 }
 .marquee--reverse .marquee__content {
   animation-direction: reverse;
-  animation-delay: -3s;
 }
 .marquee img {
   width: calc(var(--size) / 2.2);
