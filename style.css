@@ -1,6 +1,9 @@
 :root {
-  --primary: #ffffff;
-  --text: #cdd6f4;
+  --primary: #bb86fc;
+  --text: #9f9f9f;
+
+  --background: #1e1e1e;
+  --elevation1: #333333;
 
   --size: clamp(10rem, 1rem + 40vmin, 30rem);
   --gap: calc(var(--size) / 150);
@@ -13,8 +16,13 @@
   src: url(assets/RobotoSlab.woff2) format("woff2"),
     url(assets/RobotoSlab.otf) format("opentype");
 }
+@font-face {
+  font-family: "SulphurPointBold";
+  src: url(assets/SulphurPointBold.woff2) format("woff2"),
+    url(assets/SulphurPointBold.otf) format("opentype");
+}
 body {
-  background: #000000;
+  background: var(--background);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,11 +46,12 @@ main {
     height:850px;
 }
 .inset-panel {
-  border-radius: 32px;
-  background: #000000   ;
-  box-shadow: inset 2px 2px 5px #ffffff, inset -25px -25px 50px #000000;
+  border-radius: 15px;
+  background: var(--elevation1);
+  box-shadow: 2px 2px var(--primary);
 }
 h1 {
+  font-family: "SulphurPointBold";
   font-size: 5em;
   text-align: center;
   text-decoration: none;
@@ -50,6 +59,7 @@ h1 {
   margin: 8px;
 }
 h2 {
+  font-family: "SulphurPointBold";
   font-size: 3em;
   text-align: center;
   text-decoration: none;
@@ -63,7 +73,7 @@ p {
   margin: 8px;
 }
 a {
-  font-family: "RobotoSlab";
+  font-family: "SulphurPointBold";
   outline: 3px solid transparent;
   transition: outline 0.3s;
 }
@@ -101,7 +111,7 @@ a {
   flex: 5;
 }
 .social-name > p {
-  font-family: "RobotoSlab";
+  font-family: "SulphurPointBold";
   color: var(--text);
   font-size: 2em;
   margin: 0px;
@@ -119,6 +129,8 @@ a {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  border-radius: 15px;
+  box-shadow: 2px 2px var(--primary);
 }
 .marquee {
   display: flex;
