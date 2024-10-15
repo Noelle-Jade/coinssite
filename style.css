@@ -11,16 +11,19 @@
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
 }
+
 @font-face {
   font-family: "RobotoSlab";
   src: url(assets/RobotoSlab.woff2) format("woff2"),
     url(assets/RobotoSlab.otf) format("opentype");
 }
+
 @font-face {
   font-family: "SulphurPointBold";
   src: url(assets/SulphurPointBold.woff2) format("woff2"),
     url(assets/SulphurPointBold.otf) format("opentype");
 }
+
 body {
   background: var(--background);
   display: flex;
@@ -32,24 +35,29 @@ body {
   margin-top: -60px;
   gap: var(--gap);
 }
+
 main {
   flex: 3;
   width: 90%;
   display: flex;
   flex-direction: row;
 }
+
 .mainChild {
   flex: 1;
   margin: 32px;
 }
+
 .panel {
     height:100%;
 }
+
 .inset-panel {
   border-radius: 15px;
   background: var(--elevation1);
   box-shadow: 2px 2px var(--primary);
 }
+
 h1 {
   font-family: "SulphurPointBold";
   font-size: 5em;
@@ -58,6 +66,7 @@ h1 {
   color: var(--text);
   margin: 8px;
 }
+
 h2 {
   font-family: "SulphurPointBold";
   font-size: 3em;
@@ -66,25 +75,30 @@ h2 {
   color: var(--text);
   margin: 8px;
 }
+
 p {
   font-size: 1em;
   text-decoration: none;
   color: var(--text);
   margin: 8px;
 }
+
 a {
   font-family: "SulphurPointBold";
   outline: 3px solid transparent;
   transition: outline 0.3s;
 }
+
 .hoverOutline:hover {
   outline: 3px solid var(--primary);
 }
+
 #socials {
   display: flex;
   flex-direction: column;
   padding: 32px;
 }
+
 .social {
   flex: 1;
   display: flex;
@@ -92,17 +106,21 @@ a {
   padding: 16px;
   text-decoration: none;
 }
+
 .social + .social {
   margin-top: 32px;
 }
+
 .social-icon {
   flex: 0.5;
   display: flex;
   margin-right: 16px;
 }
+
 .social-icon > img {
   width: 100%;
 }
+
 .social-name {
   display: flex;
   align-items: center;
@@ -110,21 +128,25 @@ a {
   padding-left: 32px;
   flex: 5;
 }
+
 .social-name > p {
   font-family: "SulphurPointBold";
   color: var(--text);
   font-size: 2em;
   margin: 0px;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
+
 .column {
   flex: 20%;
   padding: 0 4px;
 }
+
 .column img {
   margin-top: 8px;
   vertical-align: middle;
@@ -132,12 +154,14 @@ a {
   border-radius: 15px;
   box-shadow: 2px 2px var(--primary);
 }
+
 .marquee {
   display: flex;
   overflow: hidden;
   gap: var(--gap);
   flex-direction: column;
 }
+
 .marquee__content {
   flex-shrink: 0;
   display: flex;
@@ -148,17 +172,21 @@ a {
   animation: scroll var(--duration) linear infinite;
   flex-direction: column;
 }
+
 .marquee--reverse .marquee__content {
   animation-direction: reverse;
 }
+
 .marquee img {
   width: calc(var(--size) / 2.2);
   outline: 3px solid transparent;
   transition: outline 0.3s;
 }
+
 .marquee img:hover{
   outline: 3px solid var(--primary);
 }
+
 @keyframes scroll {
   from {
     transform: translateY(var(--scroll-start));
@@ -167,6 +195,7 @@ a {
     transform: translateY(var(--scroll-end));
   }
 }
+
 .author {
   font-family: "SulphurPointBold";
   flex: 1;
@@ -174,6 +203,7 @@ a {
   flex-direction: row;
   padding: 16px;
 }
+
 .social + .author {
   margin-top: 60px;
   align-items: center;
@@ -184,37 +214,25 @@ a {
   cursor: pointer;
   transition: 0.3s;
 }
+
 #modalImg:hover {
   opacity: 0.7;
 }
+
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: hidden;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
 }
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
+
 .modal-content {
   margin: auto;
   display: block;
@@ -222,6 +240,12 @@ a {
   width: auto;
   max-height: 75%;
 }
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
 #caption {
   margin: auto;
   display: block;
@@ -234,6 +258,7 @@ a {
   color: var(--text);
   font-size: 2em;
 }
+
 @keyframes zoom {
   from {
     transform: scale(0)
@@ -242,6 +267,7 @@ a {
     transform: scale(1)
   }
 }
+
 .close {
   position: absolute;
   top: 15px;
@@ -251,9 +277,26 @@ a {
   font-weight: bold;
   transition: 0.3s;
 }
+
 .close:hover,
 .close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.button > picture > img {
+  image-rendering: pixelated;
+  width: 88px;
+  height: 31px;
+}
+
+.button {
+  margin: 4px 8px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.button:hover {
+  opacity: 1;
 }
