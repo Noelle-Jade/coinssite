@@ -1,5 +1,5 @@
 :root {
-  --primary: #bb86fc;
+  --primary: #d6556b;
   --text: #9f9f9f;
 
   --background: #1e1e1e;
@@ -154,7 +154,6 @@ a {
   vertical-align: middle;
   width: 100%;
   border-radius: 15px;
-  box-shadow: 2px 2px var(--primary);
 }
 
 .marquee {
@@ -181,12 +180,6 @@ a {
 
 .marquee img {
   width: calc(var(--size) / 2.2);
-  outline: 3px solid transparent;
-  transition: outline 0.3s;
-}
-
-.marquee img:hover{
-  outline: 3px solid var(--primary);
 }
 
 @keyframes scroll {
@@ -241,6 +234,7 @@ a {
   height: auto;
   width: auto;
   max-height: 75%;
+  max-width: 95%;
 }
 
 .modal-content, #caption {
