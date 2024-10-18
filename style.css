@@ -85,6 +85,10 @@ p {
   text-align: center;
 }
 
+.commsText {
+font-size: 1.5em;
+}
+
 a {
   font-family: "SulphurPointBold";
   outline: 3px solid transparent;
@@ -357,4 +361,19 @@ transition: 0.3s;
   content: "";
   display: table;
   clear: both;
+}
+
+table, th, td {
+  border: 1px solid var(--primary);
+  text-align: center;
+  font-family: "SulphurPointBold";
+  color: var(--text);
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+}
+
+th, td {
+padding: 8px;
 }
